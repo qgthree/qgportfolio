@@ -1,0 +1,96 @@
+@import 'ionicons.css';
+@import 'buttons.css';
+
+@font-face {
+	font-family: 'tradeGothic';
+	src: url("../fonts/tradeGothicLT.ttf");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'tradeGothic';
+	src: url("../fonts/tradeGothicLTBold.ttf");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'tradeGothic';
+	src: url("../fonts/tradeGothicLTLight.ttf");
+	font-weight: 100;
+}
+
+#app {
+	font-family: tradeGothic;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #2d2d2d;
+	background-color: #fff;
+	top: 0px;
+}
+
+html {
+  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: #2d2d2d;
+	cursor: pointer;
+}
+
+i {
+	font-size: 20px;
+}
+
+.col-left, .col-right {
+	height: 100%;
+	display: inline-flex;
+	align-items: center;
+	width: 50%;
+	white-space: normal;
+	vertical-align: bottom;
+}
+
+.col-left {
+	justify-content: flex-start;
+}
+
+.col-right {
+	justify-content: flex-end;
+}
+
+/* forms */
+.text-line {
+	background-color: transparent;
+	color: #2d2d2d;
+	outline: none;
+	outline-style: none;
+	outline-offset: 0;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid #2d2d2d 1px;
+	width: 100%;
+	font-size: 14px;
+	margin-bottom: 20px;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	overflow: hidden;
+}
+
+.text-line:focus {
+	border-bottom: solid #99004f 1px;
+	color: #99004f;
+}

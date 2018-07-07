@@ -1,18 +1,18 @@
 <template>
   <div class="explore">
-    <filterSub></filterSub>
+    <filters></filters>
     <component :is="explore"></component>
   </div>
 </template>
 
 <script>
-  import filterSub from '@/components/FilterSub'
+  import filters from '@/components/Filters'
   import projects from '@/components/Projects'
   import { mapGetters } from 'vuex'
   export default {
     name: 'explore',
     components: {
-      filterSub,
+      filters,
       projects
     },
     computed: {

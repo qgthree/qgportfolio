@@ -10,9 +10,9 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import project from '@/views/modals/Project'
-  import options from '@/views/modals/Options'
-  import projectTools from '@/views/modals/ProjectTools'
+  import project from '@/components/modals/Project'
+  import options from '@/components/modals/Options'
+  import projectTools from '@/components/modals/ProjectTools'
   import prettyButton from '@/assets/scripts/prettyButton'
   export default {
     name: 'VueModal',

@@ -121,8 +121,8 @@ export default new Vuex.Store({
   actions: {
     async newModal ({ commit, state }, view) {
       const modalClosed = (duration) => {
-        // we're switching between two modals, so we need to close it first
         return new Promise(resolve => {
+          // close the modal, then wait a moment
           commit('setModal', 'explore')
           setTimeout(resolve, duration)
         })
@@ -130,15 +130,15 @@ export default new Vuex.Store({
       if (state.modal === view) { // there's no change
         // do nothing
       }
-      else if (view === 'explore') { // we're just closing a modal
+      else if (view === 'explore') { // closing a modal
         document.body.removeAttribute('style')
         commit('setModal', 'explore')
       }
-      else if (state.modal === 'explore') { // we're just opening a modal
+      else if (state.modal === 'explore') { // opening a modal
         document.body.style.overflow = 'hidden'
         commit('setModal', view)
       }
-      else { // we're switching modals -- this is needed because previously, the modal would simply close without reopening. I think two css transitions were being triggered too closely together.
+      else { // switching modals
         try {
           await modalClosed(100)
           commit('setModal', view)

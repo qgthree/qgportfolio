@@ -116,7 +116,10 @@ export default new Vuex.Store({
   getters: {
     explore: state => state.explore,
     modal: state => state.modal,
-    projects: state => state.projects
+    projects: state => state.projects,
+    projectById: state => (id) => {
+      return state.projects.find(project => project.id === id)
+    }
   },
   actions: {
     async newModal ({ commit, state }, view) {

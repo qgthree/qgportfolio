@@ -1,47 +1,26 @@
 <template>
   <div class="modal-container">
-    <div class="modal-area shaded">
+    <div class="modal-area with_bg" :style="{'background-image': 'url(' + project.img + ')'}">
       <div class="modal-header">
         <router-link class="nav-button" :to="{ name: explore }">
           <i class="icon ion-ios-arrow-up"></i>
         </router-link>
       </div>
-      <div class="modal-body">
-        <h2>Start a Project</h2>
-        <label for="new_project-name">Choose a project name</label>
-        <input id="new_project-name" required="required" type="text" class="text-line" />
-        <label for="new_project-description">Describe your project</label>
-        <textarea rows="3" maxlength="150" id="new_project-description" required="required" class="text-line"></textarea>
-        <div class="btn-submit pretty" style="float: right"><span>Create</span></div>
-        <span>
-          Projects are groups for discussing media. Please <a>read about them</a> before you proceed.
-        </span>
-      </div>
     </div>
-    <div class="modal-area">
+    <div class="modal-area shaded">
       <div class="modal-body">
-        <h2>Join a Project</h2>
-        <div class="projectItem">
-          <div class="projectItem-image" :style="{'background-image': 'url(' + projectImage + ')'}"></div>
-          <div class="projectItem-content">
-            <strong>{{ projectName }}</strong><br />
-            This is a project for stuff. When I say "bla bla bla," I only do it so that I can see how this handles new lines.<br />
-            <div style="text-align: right">
-              <div class="btn-small accept"><span>accept</span></div>
-              <div class="btn-small decline"><span>decline</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="projectItem">
-          <div class="projectItem-image" :style="{'background-image': 'url(' + projectImage + ')'}"></div>
-          <div class="projectItem-content">
-            <strong>{{ projectName }}</strong><br />
-            This is a project for stuff. When I say "bla bla bla," I only do it so that I can see how this handles new lines.<br />
-            <div style="text-align: right">
-              <div class="btn-small accept"><span>accept</span></div>
-              <div class="btn-small decline"><span>decline</span></div>
-            </div>
-          </div>
+        <h2>{{ project.title }}</h2>
+        <p class="project-subtitle" v-html="project.date"></p>
+        <div v-html="project.description"></div>
+        <div class="projectItem-contentBottom">
+          <p>
+            <a v-if="project.codeURL" :href="project.codeURL" target="_blank">
+              <div class="btn-submit pretty"><span>View Code</span></div>
+            </a>
+            <a v-if="project.projectURL" :href="project.projectURL" target="_blank">
+              <div class="btn-submit pretty"><span>View {{ project.type }}</span></div>
+            </a>
+          </p>
         </div>
       </div>
     </div>
@@ -53,7 +32,10 @@
   export default {
     name: 'projects',
     computed: {
-      ...mapGetters(['explore'])
+      ...mapGetters(['explore']),
+      project () {
+        return this.$store.getters.projectById(this.$route.params.id)
+      }
     },
     data () {
       return {
@@ -87,5 +69,9 @@
 
   .projectItem-content {
     padding: 10px;
+  }
+  .projectItem-contentBottom {
+    width: 100%;
+    text-align: center;
   }
 </style>

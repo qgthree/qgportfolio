@@ -72,10 +72,16 @@
     width: 100%;
     padding: 20px 30px;
     background-color: #fff;
+    background-size: cover;
+    background-position: center;
   }
 
-  .shaded {
+  .modal-area.shaded {
     background-color: #E8F3EC;
+  }
+
+  .modal-area.with_bg {
+    min-height: 200px;
   }
 
   .modal-body a {

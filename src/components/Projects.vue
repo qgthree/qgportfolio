@@ -126,7 +126,7 @@
     color: #fff;
   	padding: 10px 35px 10px 30px;
     font-size: 16px;
-    background-color: #191670;
+    background-color: #511e50;
   }
 
   .project-title {

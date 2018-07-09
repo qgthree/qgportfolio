@@ -7,9 +7,9 @@
         </router-link>
       </div>
       <div class="modal-body">
-        <a><h2>HIDE THIS PROJECT</h2></a>
-        <a><h2>HIDE PROJECTS BY USER</h2></a>
-        <a><h2>HIDE FPS PROJECTS</h2></a>
+        <h2 v-for="(tech, index) in project.technologies">
+          <span>{{ tech }}</span>
+        </h2>
       </div>
     </div>
   </div>
@@ -20,7 +20,10 @@
   export default {
     name: 'projectTools',
     computed: {
-      ...mapGetters(['explore'])
+      ...mapGetters(['explore']),
+      project () {
+        return this.$store.getters.projectById(this.$route.params.id)
+      }
     }
   }
 </script>

@@ -10,7 +10,7 @@
     <div class="modal-area shaded">
       <div class="modal-body">
         <h2>{{ project.title }}</h2>
-        <p class="project-subtitle" v-html="project.date"></p>
+        <p class="project-subtitle">{{ project.client }} ∙ <span v-html="project.date"></span></p>
         <div v-html="project.description"></div>
         <div class="projectItem-contentBottom">
           <p>
@@ -21,6 +21,9 @@
               <div class="btn-submit pretty"><span>View {{ project.type }}</span></div>
             </a>
           </p>
+          <div class="projectTech" v-for="(tech, index) in project.technologies">
+            <span>{{ tech }}</span><span v-if="index !== project.technologies.length - 1">&nbsp;∙&nbsp;</span>
+          </div>
         </div>
       </div>
     </div>
@@ -36,18 +39,15 @@
       project () {
         return this.$store.getters.projectById(this.$route.params.id)
       }
-    },
-    data () {
-      return {
-        projectImage: '/img/projects/pharrell.jpg',
-        projectName: 'Westeros Dragons'
-      }
-    }// ,
-    // mounted: () => document.getElementById('new_project-name').focus()
+    }
   }
 </script>
 
 <style scoped>
+  h2 {
+    margin-bottom: 0px;
+  }
+
   .projectItem {
     background-color: #f9f9f9;
     width: 100%;
@@ -73,5 +73,13 @@
   .projectItem-contentBottom {
     width: 100%;
     text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .projectTech {
+    opacity: 0.7;
+    font-weight: 100;
+    font-size: 15px;
+    display: inline-block;
   }
 </style>

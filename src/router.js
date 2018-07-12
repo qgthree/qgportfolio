@@ -49,11 +49,11 @@ export default new Router({
       children: [
         {
           path: '/project/:id/tools',
-          name: 'projectTools',
+          name: 'projectTech',
           component: explore,
           meta: {
             title: 'Quintus Greene | Portfolio',
-            modal: 'projectTools'
+            modal: 'projectTech'
           }
         }
       ]

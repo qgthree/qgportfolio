@@ -12,14 +12,14 @@
   import { mapGetters } from 'vuex'
   import project from '@/components/modals/Project'
   import options from '@/components/modals/Options'
-  import projectTools from '@/components/modals/ProjectTools'
+  import projectTech from '@/components/modals/ProjectTech'
   import prettyButton from '@/assets/scripts/prettyButton'
   export default {
     name: 'VueModal',
     components: {
       project,
       options,
-      projectTools
+      projectTech
     },
     computed: {
       ...mapGetters(['modal'])

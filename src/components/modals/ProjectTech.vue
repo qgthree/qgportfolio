@@ -7,9 +7,12 @@
         </router-link>
       </div>
       <div class="modal-body">
-        <h2 v-for="(tech, index) in project.technologies">
-          <span>{{ tech }}</span>
-        </h2>
+        <div class="tech">
+          TECHNOLOGIES
+        </div>
+        <div class="projectTech" v-for="(tech, index) in project.technologies">
+          <span>{{ tech }}</span><span v-if="index !== project.technologies.length - 1">&nbsp;∙&nbsp;</span>
+        </div>
       </div>
     </div>
   </div>
@@ -18,7 +21,7 @@
 <script>
   import { mapGetters } from 'vuex'
   export default {
-    name: 'projectTools',
+    name: 'projectTech',
     computed: {
       ...mapGetters(['explore']),
       project () {
@@ -31,19 +34,19 @@
 <style scoped>
   .modal-container {
     width: 350px;
+    text-align: center;
   }
 
-  a {
-    text-decoration: none !important; /* this is needed because of the ".modal-body > a" style in modal.vue*/
+  .projectTech {
+    opacity: 0.7;
+    font-weight: 100;
+    font-size: 15px;
+    display: inline-block;
   }
 
-  h2 {
-    padding: 10px 0px 10px 0px;
-    margin: 0px;
-    transition: all .2s ease;
-  }
-
-  a:hover h2{
-    margin-left: 10px;
+  .tech {
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 10px;
   }
 </style>

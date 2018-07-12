@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="col-right">
-          <router-link :to="{ name: 'projectTools', params: { id: project.id } }">
+          <router-link :to="{ name: 'projectTech', params: { id: project.id } }">
             <i class="icon ion-ios-settings"></i>
           </router-link>
         </div>
@@ -126,7 +126,7 @@
     color: #fff;
   	padding: 10px 35px 10px 30px;
     font-size: 16px;
-    background-color: #511e50;
+    background-color: #44083a;
   }
 
   .project-title {

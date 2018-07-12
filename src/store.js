@@ -97,7 +97,7 @@ export default new Vuex.Store({
         description: `
           The ASH Trainee Council requested a tool to help trainees plan careers in hematology. After receiving a draft of the content, we wireframed a simple UI with elements resembling blood cells. The Trainee Council approved the design, and I used jQuery to build and animate the accordion-style widget.
         `,
-        codeURL: '',
+        codeURL: 'https://codepen.io/quinlang/pen/wXMzBj',
         projectURL: 'http://www.hematology.org/Career/Planner/',
         technologies: ['jQuery', 'HTML/CSS', 'JavaScript']
       },

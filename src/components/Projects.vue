@@ -65,6 +65,10 @@
 </script>
 
 <style>
+  .project_wrapper {
+    text-align: left;
+  }
+
   .project {
   	width: 100%;
   	margin: 20px 0px 70px 0px;
@@ -126,7 +130,7 @@
     color: #fff;
   	padding: 10px 35px 10px 30px;
     font-size: 16px;
-    background-color: #44083a;
+    background-color: #4d003b;
   }
 
   .project-title {

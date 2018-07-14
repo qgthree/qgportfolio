@@ -64,10 +64,6 @@
     overflow: hidden;
   }
 
-  .modal-container h2 {
-    font-weight: 100;
-  }
-
   .modal-area {
     width: 100%;
     padding: 20px 30px;

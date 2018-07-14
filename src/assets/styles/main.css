@@ -54,6 +54,10 @@ i {
 	font-size: 20px;
 }
 
+h2 {
+	font-weight: 100;
+}
+
 .col-left, .col-right {
 	height: 100%;
 	display: inline-flex;

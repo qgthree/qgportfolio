@@ -36,7 +36,7 @@
     left: 0px;
     width: 100%;
     height: 50px;
-    background-color: #191919;
+    background-color: #23001b;
     overflow: hidden;
   	white-space: nowrap; /* this helps our two 50% divs fit without wrapping */
   	padding: 0px 35px 0px 30px;
@@ -60,8 +60,13 @@
   }
 
   .nav-button {
-    background-color: rgba(45, 45, 45, 1);
+    background-color: #4d003b;
     color: #fff;
+    border: 0px
+  }
+
+  .nav-button:hover {
+    background-color: #4d003b;
   }
 
   .nav-button:hover i {

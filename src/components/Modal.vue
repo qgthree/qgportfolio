@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapState } from 'vuex'
   import project from '@/components/modals/Project'
   import options from '@/components/modals/Options'
   import projectTech from '@/components/modals/ProjectTech'
@@ -22,7 +22,7 @@
       projectTech
     },
     computed: {
-      ...mapGetters(['modal'])
+      ...mapState(['modal'])
     },
     mounted: () => {
       const prettyElement = document.getElementsByClassName('pretty')

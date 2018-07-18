@@ -19,11 +19,11 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapState } from 'vuex'
   export default {
     name: 'projectTech',
     computed: {
-      ...mapGetters(['explore']),
+      ...mapState(['explore']),
       project () {
         return this.$store.getters.projectById(this.$route.params.id)
       }

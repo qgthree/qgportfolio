@@ -2,6 +2,12 @@
 @import 'buttons.css';
 
 @font-face {
+	font-family: 'dense';
+	src: url("../fonts/dense.otf");
+	font-weight: normal;
+}
+
+@font-face {
 	font-family: 'tradeGothic';
 	src: url("../fonts/tradeGothicLT.ttf");
 	font-weight: normal;
@@ -38,6 +44,10 @@ body {
 html {
   box-sizing: border-box;
 	-moz-box-sizing: border-box;
+}
+
+main {
+	text-align: center;
 }
 
 *, *:before, *:after {

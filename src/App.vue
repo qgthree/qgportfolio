@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import { mapGetters, mapActions, mapMutations } from 'vuex'
+  import { mapState, mapActions, mapMutations } from 'vuex'
   import PortfolioHeader from '@/components/Header'
   import VueModal from '@/components/Modal'
   export default {
@@ -19,13 +19,13 @@
       VueModal
     },
     computed: {
-      ...mapGetters(['modal'])
+      ...mapState(['modal'])
     },
     methods: {
       ...mapActions(['newModal']),
       ...mapMutations(['setExplore'])
     },
-    created: function () {
+    created () {
       let meta = this.$route.meta
       this.newModal(meta.modal || 'explore')
       meta.explore ? this.setExplore(meta.explore) : //do nothing

@@ -1,11 +1,8 @@
 <template>
   <header class="PortfolioHeader">
     <div class="col-left">
-      <router-link class="nav-button" :to="{ name: 'options' }">
-        <i class="ion-ios-arrow-down"></i>
-      </router-link>
       <router-link class="logo" :to="{ name: 'projects' }">
-        Quintus Greene
+        QUINTUS GREENE
       </router-link>
     </div>
     <div class="col-right" style="font-size: 14px;">
@@ -36,11 +33,14 @@
     left: 0px;
     width: 100%;
     height: 50px;
-    background-color: #23001b;
     overflow: hidden;
   	white-space: nowrap; /* this helps our two 50% divs fit without wrapping */
   	padding: 0px 35px 0px 30px;
   	z-index: 2;
+    background-color: #fff;
+    -webkit-box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.08);
   }
 
   .col-left {
@@ -54,27 +54,17 @@
   }
 
   .logo {
-    margin-left: 15px;
     white-space: nowrap;
-    color: #fff;
-  }
-
-  .nav-button {
-    background-color: #4d003b;
-    color: #fff;
-    border: 0px
-  }
-
-  .nav-button:hover {
-    background-color: #4d003b;
-  }
-
-  .nav-button:hover i {
-    color: #fff;
+    font-weight: 100;
+    padding-top: 3px;
+    font-family: dense;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 3px;
   }
 
   .header-icon {
     margin-left: 30px;
-    color: #fff;
+    padding-top: 5px;
   }
 </style>

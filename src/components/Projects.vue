@@ -34,6 +34,7 @@
         </div>
         <div class="project-description" v-html="project.description"></div>
       </router-link>
+      <!--
       <div class="project-footer">
         <div class="col-left">
           <a v-if="project.codeURL" :href="project.codeURL" target="_blank">
@@ -46,17 +47,18 @@
           </a>
         </div>
       </div>
+      -->
     </div>
   </div>
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapState } from 'vuex'
   import { mapActions } from 'vuex'
   export default {
     name: 'projects',
     computed: {
-      ...mapGetters(['projects'])
+      ...mapState(['projects'])
     },
     methods: {
       ...mapActions(['newModal'])
@@ -65,14 +67,11 @@
 </script>
 
 <style>
-  .project_wrapper {
-    text-align: left;
-  }
-
   .project {
   	width: 100%;
   	margin: 20px 0px 70px 0px;
     font-size: 14px;
+    text-align: left;
   }
 
   .project-header {
@@ -128,9 +127,9 @@
 
   .project-details2 {
     color: #fff;
-  	padding: 10px 35px 10px 30px;
+    padding: 10px 35px 10px 30px;
     font-size: 16px;
-    background-color: #4d003b;
+    background-color: #191670;
   }
 
   .project-title {

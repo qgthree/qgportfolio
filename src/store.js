@@ -10,7 +10,20 @@ export default new Vuex.Store({
     projects: [
       {
         id: '1',
-        userImg: '/img/users/mod.jpg',
+        userImg: '/img/users/pick.png',
+        role: 'Front-end Development',
+        client: 'Independent',
+        img: '',
+        type: 'Website',
+        title: 'Portfolio',
+        date: '2018',
+        description: `This Vue.js project is modeled after a modern social media app. I built the responsive UI from the ground up, improving on Vue's modal component example and making use of Vue Router and Vuex.`,
+        codeURL: 'https://github.com/qgthree/qgportfolio',
+        technologies: ['HTML/CSS', 'JavaScript', 'Vue.js', 'Vuex']
+      },
+      {
+        id: '2',
+        userImg: '/img/users/babyQ.png',
         role: 'Full Stack Development',
         client: 'Independent',
         img: '/img/projects/pj_banner.jpg',
@@ -18,13 +31,13 @@ export default new Vuex.Store({
         title: 'Playjournal',
         date: '2014 &ndash; 2016',
         description: 'Playjournal presents three primary actions to users: create video contests, enter video contests, and score entries. I created the web app and social platform to solve problems experienced by YouTubers who are overwhelmed with dozens of weekly "top plays" submissions, usually received by email.',
-        codeURL: 'https://www.playjnl.com',
+        codeURL: '',
         projectURL: 'https://www.playjnl.com',
         technologies: ['HTML/CSS', 'JavaScript', 'Meteor', 'Blaze', 'Node.js', 'MongoDB', 'Mailgun', 'AWS', 'YouTube API']
       },
       {
-        id: '2',
-        userImg: '/img/users/mod.jpg',
+        id: '3',
+        userImg: '/img/users/pick.png',
         role: 'Front-end Development',
         client: 'American Soc. of Hematology',
         img: '/img/projects/scdcoalition.png',
@@ -53,8 +66,8 @@ export default new Vuex.Store({
         technologies: ['JavaScript', 'Jekyll', 'Liquid', 'Markdown', 'GitHub Pages', 'CloudCannon CMS']
       },
       {
-        id: '3',
-        userImg: '/img/users/mod.jpg',
+        id: '4',
+        userImg: '/img/users/pick.png',
         role: 'Front-end Development',
         client: 'American Soc. of Hematology',
         img: '/img/projects/citation.jpg',
@@ -64,13 +77,13 @@ export default new Vuex.Store({
         description: `
           ASH’s Scientific Affairs Team requested a tool to help researchers easily cite the <em>ASH Agenda for Hematology Research</em>, one of the Society’s online publications. Because website citations often provide the date a page was viewed, they would have to be created dynamically. Additionally, users would need the ability to download citations in various formats used with citation management software.
         `,
-        codeURL: '',
+        codeURL: 'https://codepen.io/quinlang/pen/bjeYav',
         projectURL: 'http://www.hematology.org/Research/Recommendations/Agenda.aspx',
         technologies: ['HTML5', 'JavaScript']
       },
       {
-        id: '4',
-        userImg: '/img/users/mod.jpg',
+        id: '5',
+        userImg: '/img/users/pick.png',
         role: 'Front-end Development',
         client: 'World Wildlife Fund',
         img: '/img/projects/monarch.jpg',
@@ -86,8 +99,8 @@ export default new Vuex.Store({
         technologies: ['HTML/CSS', 'JavaScript']
       },
       {
-        id: '5',
-        userImg: '/img/users/mod.jpg',
+        id: '6',
+        userImg: '/img/users/pick.png',
         role: 'Front-end Development',
         client: 'American Soc. of Hematology',
         img: '/img/projects/trainee.png',
@@ -102,8 +115,8 @@ export default new Vuex.Store({
         technologies: ['jQuery', 'HTML/CSS', 'JavaScript']
       },
       {
-        id: '6',
-        userImg: '/img/users/mod.jpg',
+        id: '7',
+        userImg: '/img/users/babyQ.png',
         role: 'Full Stack Development',
         client: 'Training House LX',
         img: '/img/projects/weights.jpg',
@@ -120,11 +133,16 @@ export default new Vuex.Store({
     ]
   },
   getters: {
-    explore: state => state.explore,
-    modal: state => state.modal,
-    projects: state => state.projects,
     projectById: state => (id) => {
       return state.projects.find(project => project.id === id)
+    }
+  },
+  mutations: {
+    setModal (state, view) {
+      state.modal = view
+    },
+    setExplore (state, view) {
+      state.explore = view
     }
   },
   actions: {
@@ -156,14 +174,6 @@ export default new Vuex.Store({
           console.log('error:' + err)
         }
       }
-    }
-  },
-  mutations: {
-    setModal (state, view) {
-      state.modal = view
-    },
-    setExplore (state, view) {
-      state.explore = view
     }
   }
 })

@@ -6,12 +6,12 @@
       </router-link>
     </div>
     <div class="col-right" style="font-size: 14px;">
-      <a class="header-icon">
+      <router-link class="header-icon" :to="{ name: 'contact' }">
         <i class="ion-ios-bell"></i>
-      </a>
-      <a class="header-icon">
+      </router-link>
+      <router-link class="header-icon" :to="{ name: 'about' }">
         <i class="ion-ios-person"></i>
-      </a>
+      </router-link>
     </div>
   </header>
 </template>

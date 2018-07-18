@@ -11,15 +11,17 @@
 <script>
   import { mapState } from 'vuex'
   import project from '@/components/modals/Project'
-  import options from '@/components/modals/Options'
+  import about from '@/components/modals/About'
+  import contact from '@/components/modals/Contact'
   import projectTech from '@/components/modals/ProjectTech'
   import prettyButton from '@/assets/scripts/prettyButton'
   export default {
     name: 'VueModal',
     components: {
       project,
-      options,
-      projectTech
+      projectTech,
+      about,
+      contact
     },
     computed: {
       ...mapState(['modal'])

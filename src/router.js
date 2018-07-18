@@ -30,6 +30,28 @@ export default new Router({
       // meta: { title: route => { return 'The best site ever' } }
     },
     {
+      path: '/contact',
+      name: 'contact',
+      component: explore,
+      meta: {
+        title: 'Quintus Greene | Portfolio',
+        modal: 'contact'
+      }
+      // for dynamic routes
+      // meta: { title: route => { return 'The best site ever' } }
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: explore,
+      meta: {
+        title: 'Quintus Greene | Portfolio',
+        modal: 'about'
+      }
+      // for dynamic routes
+      // meta: { title: route => { return 'The best site ever' } }
+    },
+    {
       path: '/options',
       name: 'options',
       component: explore,

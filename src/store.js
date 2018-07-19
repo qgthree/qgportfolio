@@ -13,7 +13,7 @@ export default new Vuex.Store({
         userImg: '/img/users/pick.png',
         role: 'Front-end Development',
         client: 'Independent',
-        img: '',
+        img: '/img/projects/laptop.jpg',
         type: 'Website',
         title: 'Portfolio',
         date: '2018',

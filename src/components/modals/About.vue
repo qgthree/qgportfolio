@@ -11,7 +11,7 @@
           ABOUT QUINTUS
         </div>
         <div class="aboutText">
-          I'm a front-end developer interested in intuitive design and modern technologies. Lately I've been having a blast with Vue.js., which was used to build this site. Come back soon to see how the site has progressed!
+          I'm a front-end developer interested in intuitive design and modern web technologies. Lately I've enjoyed working with Vue.js., which was used to build this portfolio. Come back soon to see how the site has progressed!
         </div>
         <a class="aboutText" href="/docs/QG_resume.pdf">
           <i class="icon ion-document"></i><span> View My Resume</span>

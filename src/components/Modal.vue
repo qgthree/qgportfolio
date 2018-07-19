@@ -24,12 +24,20 @@
       contact
     },
     computed: {
-      ...mapState(['modal'])
+      ...mapState(['modal', 'explore'])
     },
-    mounted: () => {
+    mounted () {
+      let self = this
+
       const prettyElement = document.getElementsByClassName('pretty')
       const modalWrapper = document.querySelector('.modal-wrapper')
       prettyButton(prettyElement, modalWrapper)
+
+      this.$el.addEventListener("click", function(event) {
+        if (!event.target.closest('.modal-container')) {
+          self.$router.push({ name: self.explore })
+        }
+      })
     }
   }
 </script>

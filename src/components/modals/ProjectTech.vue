@@ -7,11 +7,14 @@
         </router-link>
       </div>
       <div class="modal-body">
-        <div class="tech">
+        <div class="mini-title">
           TECHNOLOGIES
         </div>
-        <div class="projectTech" v-for="(tech, index) in project.technologies">
-          <span>{{ tech }}</span><span v-if="index !== project.technologies.length - 1">&nbsp;∙&nbsp;</span>
+        <div class="mini-text">
+          <div class="technology" v-for="(tech, index) in project.technologies">
+            <span>{{ tech }}</span>
+            <span v-if="index !== project.technologies.length - 1">&nbsp;∙&nbsp;</span>
+          </div>
         </div>
       </div>
     </div>
@@ -31,22 +34,17 @@
   }
 </script>
 
-<style scoped>
-  .modal-container {
-    width: 350px;
+<style lang="scss" scoped>
+  @import '../../assets/styles/_modalMini.scss';
+
+  .mini-text {
     text-align: center;
   }
+</style>
 
-  .projectTech {
-    opacity: 0.7;
-    font-weight: 100;
-    font-size: 15px;
+<style>
+  .technology {
     display: inline-block;
-  }
-
-  .tech {
-    font-size: 14px;
-    padding: 5px 0px 5px 0px;
-    margin-bottom: 10px;
+    opacity: 0.7;
   }
 </style>

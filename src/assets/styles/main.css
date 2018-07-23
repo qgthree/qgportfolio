@@ -86,7 +86,7 @@ h2 {
 }
 
 /* forms */
-.text-line {
+.inputLine {
 	background-color: transparent;
 	color: #2d2d2d;
 	outline: none;
@@ -104,7 +104,7 @@ h2 {
 	overflow: hidden;
 }
 
-.text-line:focus {
+.inputLine:focus {
 	border-bottom: solid #99004f 1px;
 	color: #99004f;
 }

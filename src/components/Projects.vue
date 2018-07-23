@@ -66,94 +66,84 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
   .project {
   	width: 100%;
   	margin: 20px 0px 70px 0px;
     font-size: 14px;
     text-align: left;
+
+    .project-header {
+    	padding: 0px 35px 0px 30px;
+    	margin-bottom: 10px;
+      height: 35px;
+      .project-role {
+        outline: none;
+        height: 35px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .project-roleImage {
+          border-radius: 50%;
+          background-position: center;
+          background-size: cover;
+          height: 35px;
+          width: 35px;
+          display: inline-flex;
+          margin-right: 12px;
+        }
+        .project-roleDetails {
+          line-height: 17px;
+        }
+      }
+    }
+
+    .project-image {
+    	height: 200px;
+    	width: 100%;
+    	background-color: #2d2d2d;
+    	background-position: center;
+    	background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      -moz-box-shadow: inset 0 -120px 90px -100px #000000;
+      -webkit-box-shadow: inset 0 -120px 90px -100px #000000;
+      box-shadow: inset 0 -120px 90px -100px #000000;
+      .project-details1 {
+        padding: 171px 35px 3px 30px;
+        font-weight: 100;
+        overflow: hidden;
+      }
+    }
+
+    .project-details2 {
+      color: #fff;
+      padding: 10px 35px 10px 30px;
+      font-size: 16px;
+      background-color: #191670;
+      .project-title {
+        font-size: 16px;
+      }
+    }
+
+    .project-description {
+    	padding: 0px 35px 0px 30px;
+      font-size: 16px;
+      margin: 16px 0px;
+    }
+
+    .project-footer {
+    	padding: 0px 35px 0px 30px;
+    	font-weight: 100;
+      text-transform: capitalize;
+    }
   }
 
-  .project-header {
-  	padding: 0px 35px 0px 30px;
-  	margin-bottom: 10px;
-    height: 35px;
-  }
-
-  .project-role {
-    outline: none;
-    height: 35px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .project-roleImage {
-  	border-radius: 50%;
-  	background-position: center;
-  	background-size: cover;
-  	height: 35px;
-  	width: 35px;
-  	display: inline-flex;
-    margin-right: 12px;
-  }
-
-  .project-roleDetails {
-    line-height: 17px;
-  }
-
-  .project-image {
-  	height: 200px;
-  	width: 100%;
-  	background-color: #2d2d2d;
-  	background-position: center;
-  	background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    -moz-box-shadow: inset 0 -120px 90px -100px #000000;
-    -webkit-box-shadow: inset 0 -120px 90px -100px #000000;
-    box-shadow: inset 0 -120px 90px -100px #000000;
-  }
-
-  .project-details1 {
-  	padding: 171px 35px 3px 30px;
-  	font-weight: 100;
-  	overflow: hidden;
-  }
-
-  .project-details2 {
-    color: #fff;
-    padding: 10px 35px 10px 30px;
-    font-size: 16px;
-    background-color: #191670;
-  }
-
-  .project-title {
-    font-size: 16px;
-  }
-
-  .project-subtitle {
-    font-weight: 100;
-    font-size: 14px;
-    opacity: 0.7;
-  }
-
-  .project-description {
-  	padding: 0px 35px 0px 30px;
-    font-size: 16px;
-    margin: 16px 0px;
-  }
-
-  .project-footer {
-  	padding: 0px 35px 0px 30px;
-  	font-weight: 100;
-    text-transform: capitalize;
-  }
-
+  /* shared classes */
   .project-header .col-left, .project-header .col-right,
   .project-details1 .col-left, .project-details1 .col-right,
   .project-footer .col-left, .project-footer .col-right {
@@ -165,6 +155,7 @@
   	overflow: hidden;
   }
 
+  /* queries */
   @media screen and (min-width: 800px) {
     .project_wrapper {
       display: grid;
@@ -193,8 +184,16 @@
 
     .project-header, .project-details1, .project-details2,
     .project-description, .project-footer {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 16px !important;
+      padding-right: 16px !important;
     }
+  }
+</style>
+
+<style lang="scss">
+  .project-subtitle {
+    font-weight: 100;
+    font-size: 14px;
+    opacity: 0.7;
   }
 </style>

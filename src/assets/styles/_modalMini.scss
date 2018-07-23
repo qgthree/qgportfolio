@@ -1,0 +1,22 @@
+.modal-container {
+	width: 350px !important;
+	text-align: center;
+}
+
+.mini-title {
+	font-size: 14px;
+	padding: 5px 0px 5px 0px;
+	margin-bottom: 10px;
+}
+
+%mini-text_shared {
+	font-weight: 100;
+	font-size: 15px;
+	display: inline-block;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.mini-text {
+	@extend %mini-text_shared;
+}

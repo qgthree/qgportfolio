@@ -15,23 +15,22 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
   .filters {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
     padding: 15px 35px;
-  }
-
-  .filter {
-    font-size: 14px;
-    margin: 0px 10px;
-    cursor: pointer;
-    transition: all .2s ease;
-    display: inline-block;
-    padding: 5px 0px 5px 0px;
-    overflow: hidden;
-    position: relative;
+    .filter {
+      font-size: 14px;
+      margin: 0px 10px;
+      cursor: pointer;
+      transition: all .2s ease;
+      display: inline-block;
+      padding: 5px 0px 5px 0px;
+      overflow: hidden;
+      position: relative;
+    }
   }
 
   .filter:before {

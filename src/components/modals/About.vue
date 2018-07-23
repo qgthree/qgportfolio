@@ -7,13 +7,13 @@
         </router-link>
       </div>
       <div class="modal-body">
-        <div class="aboutTitle">
+        <div class="mini-title">
           ABOUT QUINTUS
         </div>
-        <div class="aboutText">
+        <div class="mini-text">
           I'm a front-end developer interested in intuitive design and modern web technologies. Lately I've enjoyed working with Vue.js., which was used to build this portfolio. Come back soon to see how the site has progressed!
         </div>
-        <a class="aboutText" href="/docs/QG_resume.pdf">
+        <a class="mini-text" href="/docs/QG_resume.pdf">
           <i class="icon ion-document"></i><span> View My Resume</span>
         </a>
       </div>
@@ -34,23 +34,6 @@
   }
 </script>
 
-<style scoped>
-  .modal-container {
-    width: 350px;
-    text-align: center;
-  }
-
-  .aboutText {
-    font-weight: 100;
-    font-size: 15px;
-    display: inline-block;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-
-  .aboutTitle {
-    font-size: 14px;
-    padding: 5px 0px 5px 0px;
-    margin-bottom: 10px;
-  }
+<style lang="scss" scoped>
+  @import '../../assets/styles/_modalMini.scss';
 </style>

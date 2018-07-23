@@ -25,7 +25,7 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
   .explore {
     padding-top: 50px;
     text-align: center;
